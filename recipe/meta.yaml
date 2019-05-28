@@ -33,7 +33,7 @@ about:
   home: https://github.com/rsheftel/pandas_market_calendars
   license: MIT
   license_family: MIT
-  license_file: LICENSE
+  license_file: '{{ environ["RECIPE_DIR"] }}/LICENSE'
   summary: Market calendars to use with pandas for trading applications.
   description: |
     The Pandas package is widely used in finance and specifically for time
