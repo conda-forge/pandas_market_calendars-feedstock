@@ -11,7 +11,7 @@ source:
   sha256: {{ sha256 }}
 
 build:
-  number: 0
+  number: 1
   noarch: python
   script: "{{ PYTHON }} -m pip install . -vv"
 
@@ -22,8 +22,10 @@ requirements:
     - pip
   run:
     - python
+    - setuptools
     - pandas >=0.18
     - pytz
+    - six
 
 test:
   imports:
@@ -33,7 +35,7 @@ about:
   home: https://github.com/rsheftel/pandas_market_calendars
   license: MIT
   license_family: MIT
-  license_file: LICENSE
+  license_file: '{{ environ["RECIPE_DIR"] }}/LICENSE'
   summary: Market calendars to use with pandas for trading applications.
   description: |
     The Pandas package is widely used in finance and specifically for time
