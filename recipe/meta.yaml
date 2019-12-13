@@ -1,6 +1,6 @@
 {% set name = "pandas_market_calendars" %}
-{% set version = "1.1" %}
-{% set sha256 = "828178d434173f439553fa33ed3b9d40d70202f2cbf4247bb3fd42e5fcbb5acd" %}
+{% set version = "1.2" %}
+{% set sha256 = "d661ef9f723b817b2e9dead72bc37ca03909d5087a9f6704d77645e9b1dd4db7" %}
 
 package:
   name: {{ name|lower }}
@@ -11,7 +11,7 @@ source:
   sha256: {{ sha256 }}
 
 build:
-  number: 1
+  number: 0 
   noarch: python
   script: "{{ PYTHON }} -m pip install . -vv"
 
@@ -21,7 +21,7 @@ requirements:
     - setuptools
     - pip
   run:
-    - python
+    - python >=3.4,<4.0dev
     - setuptools
     - pandas >=0.18
     - pytz
