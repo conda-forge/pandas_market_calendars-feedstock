@@ -5,7 +5,7 @@ Home: https://github.com/rsheftel/pandas_market_calendars
 
 Package license: MIT
 
-Feedstock license: BSD 3-Clause
+Feedstock license: BSD-3-Clause
 
 Summary: Market calendars to use with pandas for trading applications.
 
