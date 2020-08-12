@@ -21,11 +21,11 @@ requirements:
     - setuptools
     - pip
   run:
-    - python >=3.4,<4.0dev
+    - python >=3.5.0,<4.0dev
     - setuptools
     - pandas >=0.18
     - pytz
-    - six
+    - python-dateutil
 
 test:
   imports:
