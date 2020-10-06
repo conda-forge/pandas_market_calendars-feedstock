@@ -1,6 +1,6 @@
 {% set name = "pandas_market_calendars" %}
-{% set version = "1.4.2" %}
-{% set sha256 = "8df5470818dfc71a3eda045e05532650bace51a1b55d1d2411ba1d7d5b323c1e" %}
+{% set version = "1.5.0" %}
+{% set sha256 = "3102ee0af4f5ed14dd2fcf4579df1da8801de4660aad8e10c62656f1bf21d4c8" %}
 
 package:
   name: {{ name|lower }}
