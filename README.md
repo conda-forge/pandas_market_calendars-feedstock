@@ -5,9 +5,13 @@ Home: https://github.com/rsheftel/pandas_market_calendars
 
 Package license: MIT
 
-Feedstock license: BSD-3-Clause
+Feedstock license: [BSD-3-Clause](https://github.com/conda-forge/pandas_market_calendars-feedstock/blob/master/LICENSE.txt)
 
 Summary: Market calendars to use with pandas for trading applications.
+
+Development: https://github.com/rsheftel/pandas_market_calendars
+
+Documentation: https://pandas-market-calendars.readthedocs.io/en/latest/
 
 The Pandas package is widely used in finance and specifically for time
 series analysis. It includes excellent functionality for generating
