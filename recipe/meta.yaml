@@ -1,6 +1,6 @@
 {% set name = "pandas_market_calendars" %}
-{% set version = "1.6.1" %}
-{% set sha256 = "74650b9bf154a8f214d754729a38776479d5002a88261869e99db80e63e9d6b8" %}
+{% set version = "1.7" %}
+{% set sha256 = "706e5a9fac3e7722fa5875a230a0abc813128ffff3f36064da676b445017575d" %}
 
 package:
   name: {{ name|lower }}
@@ -16,7 +16,7 @@ build:
   script: {{ PYTHON }} -m pip install . -vv
 
 requirements:
-  build:
+  host:
     - python
     - setuptools
     - pip
