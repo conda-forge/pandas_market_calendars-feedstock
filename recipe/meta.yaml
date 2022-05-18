@@ -34,8 +34,8 @@ outputs:
       - python-dateutil
       - pytz
       - setuptools
-      run_constrained:
-        - {{ pin_subpackage("pandas-market-calendars", max_pin="x.x.x") }}
+    run_constrained:
+      - {{ pin_subpackage("pandas-market-calendars", max_pin="x.x.x") }}
 
     test:
       imports:
