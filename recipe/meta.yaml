@@ -12,7 +12,7 @@ source:
 build:
   noarch: python
   script: {{ PYTHON }} -m pip install . -vv
-  number: 1
+  number: 2
 
 requirements:
   host:
@@ -23,6 +23,8 @@ requirements:
 
 outputs:
   - name: pandas_market_calendars
+    build:
+      noarch: python
     requirements:
       host:
         - pip
@@ -42,6 +44,8 @@ outputs:
         - pandas_market_calendars
 
   - name: pandas-market-calendars
+    build:
+      noarch: python
     requirements:
       host:
         - python >=3.7
