@@ -167,4 +167,5 @@ Feedstock Maintainers
 * [@mathiaseitz](https://github.com/mathiaseitz/)
 * [@trendelkampschroer](https://github.com/trendelkampschroer/)
 * [@yehoshuadimarsky](https://github.com/yehoshuadimarsky/)
+* [@timkpaine](https://github.com/timkpaine/)
 
