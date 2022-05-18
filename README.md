@@ -165,9 +165,7 @@ Feedstock Maintainers
 =====================
 
 * [@mathiaseitz](https://github.com/mathiaseitz/)
+* [@timkpaine](https://github.com/timkpaine/)
 * [@trendelkampschroer](https://github.com/trendelkampschroer/)
 * [@yehoshuadimarsky](https://github.com/yehoshuadimarsky/)
-
-
-<!-- dummy commit to enable rerendering -->
 
