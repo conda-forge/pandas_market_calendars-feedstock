@@ -25,17 +25,17 @@ outputs:
   - name: pandas_market_calendars
     requirements:
       host:
-      - pip
-      - python >=3.7
-    run:
-      - exchange-calendars >=3.3
-      - pandas >=1.1
-      - python >=3.7
-      - python-dateutil
-      - pytz
-      - setuptools
-    run_constrained:
-      - {{ pin_subpackage("pandas-market-calendars", max_pin="x.x.x") }}
+        - pip
+        - python >=3.7
+      run:
+        - exchange-calendars >=3.3
+        - pandas >=1.1
+        - python >=3.7
+        - python-dateutil
+        - pytz
+        - setuptools
+      run_constrained:
+        - {{ pin_subpackage("pandas-market-calendars", max_pin="x.x.x") }}
 
     test:
       imports:
