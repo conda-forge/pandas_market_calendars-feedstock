@@ -1,11 +1,11 @@
-About pandas_market_calendars
+About pandas-market-calendars
 =============================
 
 Home: https://github.com/rsheftel/pandas_market_calendars
 
 Package license: MIT
 
-Feedstock license: [BSD-3-Clause](https://github.com/conda-forge/pandas_market_calendars-feedstock/blob/master/LICENSE.txt)
+Feedstock license: [BSD-3-Clause](https://github.com/conda-forge/pandas_market_calendars-feedstock/blob/main/LICENSE.txt)
 
 Summary: Market calendars to use with pandas for trading applications.
 
@@ -36,8 +36,8 @@ Current build status
 
 <table><tr><td>All platforms:</td>
     <td>
-      <a href="https://dev.azure.com/conda-forge/feedstock-builds/_build/latest?definitionId=6826&branchName=master">
-        <img src="https://dev.azure.com/conda-forge/feedstock-builds/_apis/build/status/pandas_market_calendars-feedstock?branchName=master">
+      <a href="https://dev.azure.com/conda-forge/feedstock-builds/_build/latest?definitionId=6826&branchName=main">
+        <img src="https://dev.azure.com/conda-forge/feedstock-builds/_apis/build/status/pandas_market_calendars-feedstock?branchName=main">
       </a>
     </td>
   </tr>
@@ -48,35 +48,61 @@ Current release info
 
 | Name | Downloads | Version | Platforms |
 | --- | --- | --- | --- |
-| [![Conda Recipe](https://img.shields.io/badge/recipe-pandas_market_calendars-green.svg)](https://anaconda.org/conda-forge/pandas_market_calendars) | [![Conda Downloads](https://img.shields.io/conda/dn/conda-forge/pandas_market_calendars.svg)](https://anaconda.org/conda-forge/pandas_market_calendars) | [![Conda Version](https://img.shields.io/conda/vn/conda-forge/pandas_market_calendars.svg)](https://anaconda.org/conda-forge/pandas_market_calendars) | [![Conda Platforms](https://img.shields.io/conda/pn/conda-forge/pandas_market_calendars.svg)](https://anaconda.org/conda-forge/pandas_market_calendars) |
+| [![Conda Recipe](https://img.shields.io/badge/recipe-pandas--market--calendars-green.svg)](https://anaconda.org/conda-forge/pandas-market-calendars) | [![Conda Downloads](https://img.shields.io/conda/dn/conda-forge/pandas-market-calendars.svg)](https://anaconda.org/conda-forge/pandas-market-calendars) | [![Conda Version](https://img.shields.io/conda/vn/conda-forge/pandas-market-calendars.svg)](https://anaconda.org/conda-forge/pandas-market-calendars) | [![Conda Platforms](https://img.shields.io/conda/pn/conda-forge/pandas-market-calendars.svg)](https://anaconda.org/conda-forge/pandas-market-calendars) |
 
-Installing pandas_market_calendars
+Installing pandas-market-calendars
 ==================================
 
-Installing `pandas_market_calendars` from the `conda-forge` channel can be achieved by adding `conda-forge` to your channels with:
+Installing `pandas-market-calendars` from the `conda-forge` channel can be achieved by adding `conda-forge` to your channels with:
 
 ```
 conda config --add channels conda-forge
 conda config --set channel_priority strict
 ```
 
-Once the `conda-forge` channel has been enabled, `pandas_market_calendars` can be installed with:
+Once the `conda-forge` channel has been enabled, `pandas-market-calendars` can be installed with `conda`:
 
 ```
-conda install pandas_market_calendars
+conda install pandas-market-calendars
 ```
 
-It is possible to list all of the versions of `pandas_market_calendars` available on your platform with:
+or with `mamba`:
 
 ```
-conda search pandas_market_calendars --channel conda-forge
+mamba install pandas-market-calendars
+```
+
+It is possible to list all of the versions of `pandas-market-calendars` available on your platform with `conda`:
+
+```
+conda search pandas-market-calendars --channel conda-forge
+```
+
+or with `mamba`:
+
+```
+mamba search pandas-market-calendars --channel conda-forge
+```
+
+Alternatively, `mamba repoquery` may provide more information:
+
+```
+# Search all versions available on your platform:
+mamba repoquery search pandas-market-calendars --channel conda-forge
+
+# List packages depending on `pandas-market-calendars`:
+mamba repoquery whoneeds pandas-market-calendars --channel conda-forge
+
+# List dependencies of `pandas-market-calendars`:
+mamba repoquery depends pandas-market-calendars --channel conda-forge
 ```
 
 
 About conda-forge
 =================
 
-[![Powered by NumFOCUS](https://img.shields.io/badge/powered%20by-NumFOCUS-orange.svg?style=flat&colorA=E1523D&colorB=007D8A)](http://numfocus.org)
+[![Powered by
+NumFOCUS](https://img.shields.io/badge/powered%20by-NumFOCUS-orange.svg?style=flat&colorA=E1523D&colorB=007D8A)](https://numfocus.org)
 
 conda-forge is a community-led conda channel of installable packages.
 In order to provide high-quality builds, the process has been automated into the
@@ -86,10 +112,12 @@ for each of the installable packages. Such a repository is known as a *feedstock
 A feedstock is made up of a conda recipe (the instructions on what and how to build
 the package) and the necessary configurations for automatic building using freely
 available continuous integration services. Thanks to the awesome service provided by
-[CircleCI](https://circleci.com/), [AppVeyor](https://www.appveyor.com/)
-and [TravisCI](https://travis-ci.com/) it is possible to build and upload installable
-packages to the [conda-forge](https://anaconda.org/conda-forge)
-[Anaconda-Cloud](https://anaconda.org/) channel for Linux, Windows and OSX respectively.
+[Azure](https://azure.microsoft.com/en-us/services/devops/), [GitHub](https://github.com/),
+[CircleCI](https://circleci.com/), [AppVeyor](https://www.appveyor.com/),
+[Drone](https://cloud.drone.io/welcome), and [TravisCI](https://travis-ci.com/)
+it is possible to build and upload installable packages to the
+[conda-forge](https://anaconda.org/conda-forge) [Anaconda-Cloud](https://anaconda.org/)
+channel for Linux, Windows and OSX respectively.
 
 To manage the continuous integration and simplify feedstock maintenance
 [conda-smithy](https://github.com/conda-forge/conda-smithy) has been developed.
@@ -111,17 +139,17 @@ Terminology
                   produce the finished article (built conda distributions)
 
 
-Updating pandas_market_calendars-feedstock
+Updating pandas-market-calendars-feedstock
 ==========================================
 
-If you would like to improve the pandas_market_calendars recipe or build a new
+If you would like to improve the pandas-market-calendars recipe or build a new
 package version, please fork this repository and submit a PR. Upon submission,
 your changes will be run on the appropriate platforms to give the reviewer an
 opportunity to confirm that the changes result in a successful build. Once
 merged, the recipe will be re-built and uploaded automatically to the
 `conda-forge` channel, whereupon the built conda packages will be available for
 everybody to install and use from the `conda-forge` channel.
-Note that all branches in the conda-forge/pandas_market_calendars-feedstock are
+Note that all branches in the conda-forge/pandas-market-calendars-feedstock are
 immediately built and any created packages are uploaded, so PRs should be based
 on branches in forks and branches in the main repository should only be used to
 build distinct package versions.
@@ -138,4 +166,5 @@ Feedstock Maintainers
 
 * [@mathiaseitz](https://github.com/mathiaseitz/)
 * [@trendelkampschroer](https://github.com/trendelkampschroer/)
+* [@yehoshuadimarsky](https://github.com/yehoshuadimarsky/)
 
