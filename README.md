@@ -1,4 +1,4 @@
-About pandas-market-calendars
+About pandas_market_calendars
 =============================
 
 Home: https://github.com/rsheftel/pandas_market_calendars
@@ -49,27 +49,28 @@ Current release info
 | Name | Downloads | Version | Platforms |
 | --- | --- | --- | --- |
 | [![Conda Recipe](https://img.shields.io/badge/recipe-pandas--market--calendars-green.svg)](https://anaconda.org/conda-forge/pandas-market-calendars) | [![Conda Downloads](https://img.shields.io/conda/dn/conda-forge/pandas-market-calendars.svg)](https://anaconda.org/conda-forge/pandas-market-calendars) | [![Conda Version](https://img.shields.io/conda/vn/conda-forge/pandas-market-calendars.svg)](https://anaconda.org/conda-forge/pandas-market-calendars) | [![Conda Platforms](https://img.shields.io/conda/pn/conda-forge/pandas-market-calendars.svg)](https://anaconda.org/conda-forge/pandas-market-calendars) |
+| [![Conda Recipe](https://img.shields.io/badge/recipe-pandas_market_calendars-green.svg)](https://anaconda.org/conda-forge/pandas_market_calendars) | [![Conda Downloads](https://img.shields.io/conda/dn/conda-forge/pandas_market_calendars.svg)](https://anaconda.org/conda-forge/pandas_market_calendars) | [![Conda Version](https://img.shields.io/conda/vn/conda-forge/pandas_market_calendars.svg)](https://anaconda.org/conda-forge/pandas_market_calendars) | [![Conda Platforms](https://img.shields.io/conda/pn/conda-forge/pandas_market_calendars.svg)](https://anaconda.org/conda-forge/pandas_market_calendars) |
 
-Installing pandas-market-calendars
+Installing pandas_market_calendars
 ==================================
 
-Installing `pandas-market-calendars` from the `conda-forge` channel can be achieved by adding `conda-forge` to your channels with:
+Installing `pandas_market_calendars` from the `conda-forge` channel can be achieved by adding `conda-forge` to your channels with:
 
 ```
 conda config --add channels conda-forge
 conda config --set channel_priority strict
 ```
 
-Once the `conda-forge` channel has been enabled, `pandas-market-calendars` can be installed with `conda`:
+Once the `conda-forge` channel has been enabled, `pandas-market-calendars, pandas_market_calendars` can be installed with `conda`:
 
 ```
-conda install pandas-market-calendars
+conda install pandas-market-calendars pandas_market_calendars
 ```
 
 or with `mamba`:
 
 ```
-mamba install pandas-market-calendars
+mamba install pandas-market-calendars pandas_market_calendars
 ```
 
 It is possible to list all of the versions of `pandas-market-calendars` available on your platform with `conda`:
@@ -139,17 +140,17 @@ Terminology
                   produce the finished article (built conda distributions)
 
 
-Updating pandas-market-calendars-feedstock
+Updating pandas_market_calendars-feedstock
 ==========================================
 
-If you would like to improve the pandas-market-calendars recipe or build a new
+If you would like to improve the pandas_market_calendars recipe or build a new
 package version, please fork this repository and submit a PR. Upon submission,
 your changes will be run on the appropriate platforms to give the reviewer an
 opportunity to confirm that the changes result in a successful build. Once
 merged, the recipe will be re-built and uploaded automatically to the
 `conda-forge` channel, whereupon the built conda packages will be available for
 everybody to install and use from the `conda-forge` channel.
-Note that all branches in the conda-forge/pandas-market-calendars-feedstock are
+Note that all branches in the conda-forge/pandas_market_calendars-feedstock are
 immediately built and any created packages are uploaded, so PRs should be based
 on branches in forks and branches in the main repository should only be used to
 build distinct package versions.
@@ -165,7 +166,7 @@ Feedstock Maintainers
 =====================
 
 * [@mathiaseitz](https://github.com/mathiaseitz/)
+* [@timkpaine](https://github.com/timkpaine/)
 * [@trendelkampschroer](https://github.com/trendelkampschroer/)
 * [@yehoshuadimarsky](https://github.com/yehoshuadimarsky/)
-* [@timkpaine](https://github.com/timkpaine/)
 
