@@ -21,37 +21,37 @@ requirements:
   run:
     - python >=3.7
 
- outputs:
-   - name: pandas_market_calendars
-     requirements:
-       host:
-        - pip
+outputs:
+  - name: pandas_market_calendars
+    requirements:
+      host:
+      - pip
+      - python >=3.7
+    run:
+      - exchange-calendars >=3.3
+      - pandas >=1.1
+      - python >=3.7
+      - python-dateutil
+      - pytz
+      - setuptools
+      run_constrained:
+        - {{ pin_subpackage("pandas-market-calendars", max_pin="x.x.x") }}
+
+    test:
+      imports:
+        - pandas_market_calendars
+
+  - name: pandas-market-calendars
+    requirements:
+      host:
         - python >=3.7
       run:
-        - exchange-calendars >=3.3
-        - pandas >=1.1
         - python >=3.7
-        - python-dateutil
-        - pytz
-        - setuptools
-       run_constrained:
-         - {{ pin_subpackage("pandas-market-calendars", max_pin="x.x.x") }}
+        - {{ pin_subpackage("pandas_market_calendars", max_pin="x.x.x") }}
 
-     test:
-       imports:
-         - pandas_market_calendars
-
-   - name: pandas-market-calendars
-     requirements:
-       host:
-         - python >=3.7
-       run:
-         - python >=3.7
-         - {{ pin_subpackage("pandas_market_calendars", max_pin="x.x.x") }}
-
-     test:
-       imports:
-         - pandas_market_calendars
+    test:
+      imports:
+        - pandas_market_calendars
 
 about:
   home: https://github.com/rsheftel/pandas_market_calendars
