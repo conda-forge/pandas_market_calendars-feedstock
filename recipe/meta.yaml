@@ -17,41 +17,30 @@ build:
 requirements:
   host:
     - pip
-    - python >=3.7
+    - python >=3.8
   run:
-    - python >=3.7
+    - exchange-calendars >=3.3
+    - pandas >=1.1
+    - python >=3.8
+    - python-dateutil
+    - pytz
+    - setuptools
+
+test:
+  imports:
+    - pandas_market_calendars
 
 outputs:
   - name: pandas_market_calendars
-    build:
-      noarch: python
-    requirements:
-      host:
-        - pip
-        - python >=3.7
-      run:
-        - exchange-calendars >=3.3
-        - pandas >=1.1
-        - python >=3.7
-        - python-dateutil
-        - pytz
-        - setuptools
-      run_constrained:
-        - {{ pin_subpackage("pandas-market-calendars", max_pin="x.x.x") }}
-
-    test:
-      imports:
-        - pandas_market_calendars
-
   - name: pandas-market-calendars
     build:
       noarch: python
     requirements:
       host:
-        - python >=3.7
+        - python >=3.8
       run:
-        - python >=3.7
-        - {{ pin_subpackage("pandas_market_calendars", max_pin="x.x.x") }}
+        - python >=3.8
+        - {{ pin_subpackage("pandas_market_calendars", exact=True) }}
 
     test:
       imports:
