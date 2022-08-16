@@ -1,5 +1,5 @@
 {% set name = "pandas_market_calendars" %}
-{% set version = "3.5" %}
+{% set version = "4.0" %}
 
 package:
   name: {{ name|lower }}
@@ -7,7 +7,7 @@ package:
 
 source:
   url: https://pypi.io/packages/source/{{ name[0] }}/{{ name }}/pandas_market_calendars-{{ version }}.tar.gz
-  sha256: 57c5a61230d7a8d6c29f84d8b97a23fe0f10a6d67b2df05197957022436c369e
+  sha256: e6d1bd190aa755945f02158c2890b8869ba20792afbb92bed27cb358c6b7cfc7
 
 build:
   noarch: python
@@ -17,41 +17,30 @@ build:
 requirements:
   host:
     - pip
-    - python >=3.7
+    - python >=3.8
   run:
-    - python >=3.7
+    - exchange-calendars >=3.3
+    - pandas >=1.1
+    - python >=3.8
+    - python-dateutil
+    - pytz
+    - setuptools
+
+test:
+  imports:
+    - pandas_market_calendars
 
 outputs:
   - name: pandas_market_calendars
-    build:
-      noarch: python
-    requirements:
-      host:
-        - pip
-        - python >=3.7
-      run:
-        - exchange-calendars >=3.3
-        - pandas >=1.1
-        - python >=3.7
-        - python-dateutil
-        - pytz
-        - setuptools
-      run_constrained:
-        - {{ pin_subpackage("pandas-market-calendars", max_pin="x.x.x") }}
-
-    test:
-      imports:
-        - pandas_market_calendars
-
   - name: pandas-market-calendars
     build:
       noarch: python
     requirements:
       host:
-        - python >=3.7
+        - python >=3.8
       run:
-        - python >=3.7
-        - {{ pin_subpackage("pandas_market_calendars", max_pin="x.x.x") }}
+        - python >=3.8
+        - {{ pin_subpackage("pandas_market_calendars", exact=True) }}
 
     test:
       imports:
