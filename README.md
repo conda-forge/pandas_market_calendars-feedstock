@@ -1,11 +1,11 @@
-About pandas_market_calendars
-=============================
+About pandas_market_calendars-feedstock
+=======================================
+
+Feedstock license: [BSD-3-Clause](https://github.com/conda-forge/pandas_market_calendars-feedstock/blob/main/LICENSE.txt)
 
 Home: https://github.com/rsheftel/pandas_market_calendars
 
 Package license: MIT
-
-Feedstock license: [BSD-3-Clause](https://github.com/conda-forge/pandas_market_calendars-feedstock/blob/main/LICENSE.txt)
 
 Summary: Market calendars to use with pandas for trading applications.
 
