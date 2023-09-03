@@ -18,13 +18,13 @@ requirements:
   host:
     - pip
     - python >=3.8
+    - setuptools >=61
   run:
     - exchange-calendars >=3.3
     - pandas >=1.1
     - python >=3.8
     - python-dateutil
     - pytz
-    - setuptools
 
 test:
   imports:
