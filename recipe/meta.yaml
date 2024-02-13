@@ -20,12 +20,12 @@ requirements:
     - cross-python_{{ target_platform }}     # [build_platform != target_platform]
   host:
     - pip
-    - python >=3.8
+    - python >=3.9
     - setuptools >=61
   run:
     - exchange-calendars >=3.3
     - pandas >=1.1
-    - python >=3.8
+    - python >=3.9
     - python-dateutil
     - pytz
 
