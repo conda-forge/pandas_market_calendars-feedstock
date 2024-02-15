@@ -1,5 +1,5 @@
 {% set name = "pandas_market_calendars" %}
-{% set version = "4.3.3" %}
+{% set version = "4.4.0" %}
 
 package:
   name: {{ name|lower }}
@@ -7,7 +7,7 @@ package:
 
 source:
   url: https://pypi.io/packages/source/{{ name[0] }}/{{ name }}/pandas_market_calendars-{{ version }}.tar.gz
-  sha256: 760ea9269c4018ac68b0458c0c817cf4964f9d14e51f872a55a5c4d23ece3c3f
+  sha256: febff8054f3bd2dd27111c0e9902e14534ee9ac33de6128bb9b83f408a3e1584
 
 build:
   noarch: python
@@ -20,12 +20,12 @@ requirements:
     - cross-python_{{ target_platform }}     # [build_platform != target_platform]
   host:
     - pip
-    - python >=3.8
+    - python >=3.9
     - setuptools >=61
   run:
     - exchange-calendars >=3.3
     - pandas >=1.1
-    - python >=3.8
+    - python >=3.9
     - python-dateutil
     - pytz
 
