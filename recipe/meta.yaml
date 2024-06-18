@@ -1,5 +1,5 @@
 {% set name = "pandas_market_calendars" %}
-{% set version = "4.4.0" %}
+{% set version = "4.4.1" %}
 
 package:
   name: {{ name|lower }}
@@ -7,7 +7,7 @@ package:
 
 source:
   url: https://pypi.io/packages/source/{{ name[0] }}/{{ name }}/pandas_market_calendars-{{ version }}.tar.gz
-  sha256: febff8054f3bd2dd27111c0e9902e14534ee9ac33de6128bb9b83f408a3e1584
+  sha256: 43e933eb8c323345d6d6457bd1fed7ae5fa9df2dda774a9ba3c1a496bad88994
 
 build:
   noarch: python
