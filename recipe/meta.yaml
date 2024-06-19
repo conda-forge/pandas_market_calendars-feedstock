@@ -30,6 +30,10 @@ requirements:
     - pytz
 
 test:
+  requires:
+    - pip
+  commands:
+    - pip check
   imports:
     - pandas_market_calendars
 
