@@ -6,7 +6,7 @@ package:
   version: {{ version }}
 
 source:
-  url: https://pypi.io/packages/source/{{ name[0] }}/{{ name }}/pandas_market_calendars-{{ version }}.tar.gz
+  url: https://pypi.org/packages/source/{{ name[0] }}/{{ name }}/pandas_market_calendars-{{ version }}.tar.gz
   sha256: 4261a2c065565de1cd3646982b2e206e1069714b8140878dd6eba972546dfbcb
 
 build:
