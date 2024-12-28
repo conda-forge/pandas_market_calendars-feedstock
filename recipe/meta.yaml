@@ -1,5 +1,6 @@
 {% set name = "pandas_market_calendars" %}
 {% set version = "4.4.2" %}
+{% set python_min = "3.10" %}
 
 package:
   name: {{ name|lower }}
