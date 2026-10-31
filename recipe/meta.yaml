@@ -1,5 +1,5 @@
 {% set name = "pandas_market_calendars" %}
-{% set version = "5.5.0" %}
+{% set version = "5.6.0" %}
 
 package:
   name: {{ name|lower }}
@@ -7,11 +7,11 @@ package:
 
 source:
   url: https://files.pythonhosted.org/packages/source/{{ name[0] }}/{{ name }}/pandas_market_calendars-{{ version }}.tar.gz
-  sha256: 3b586618e87b747e937636d0e1e4bf9e14f67e5996fa3170243e96278cb6e29d
+  sha256: ba00843e02ca7627a23dfff05c6156f5678ac13dbea7426209507b075fc2b746
 
 build:
   noarch: python
-  script: {{ PYTHON }} -m pip install . -vv
+  script: {{ PYTHON }} -m pip install . -vv --no-deps --no-build-isolation
   number: 0
 
 requirements:
@@ -21,18 +21,23 @@ requirements:
   host:
     - pip
     - python {{ python_min }}
-    - setuptools >=61
+    - setuptools >=77.0.3
   run:
     - exchange-calendars >=3.3
-    - pandas >=1.1
+    - pandas >=2.3
     - python >={{ python_min }}
     - python-dateutil
 
 test:
   requires:
     - python {{ python_min }}
+    - pip
+    # exchange-calendars metadata requires the Python tzdata distribution for pip check.
+    - python-tzdata
   imports:
     - pandas_market_calendars
+  commands:
+    - pip check
 
 outputs:
   - name: pandas_market_calendars
