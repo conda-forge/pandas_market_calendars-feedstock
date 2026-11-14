@@ -1,5 +1,5 @@
 {% set name = "pandas_market_calendars" %}
-{% set version = "5.6.0" %}
+{% set version = "5.6.1" %}
 
 package:
   name: {{ name|lower }}
@@ -7,7 +7,7 @@ package:
 
 source:
   url: https://files.pythonhosted.org/packages/source/{{ name[0] }}/{{ name }}/pandas_market_calendars-{{ version }}.tar.gz
-  sha256: ba00843e02ca7627a23dfff05c6156f5678ac13dbea7426209507b075fc2b746
+  sha256: 72ae3d3da7cc62cccca1a899d957a220b8448bc488bc29d4ee84d7992d380589
 
 build:
   noarch: python
